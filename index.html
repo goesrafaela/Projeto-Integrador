@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FSW Barber - Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="user-logged">
+    <header class="main-header">
+      <div class="header-content">
+        <div class="logo-container">
+          <img src="img/Logo.png" alt="FSW Barber" class="logo-img" />
+        </div>
+
+        <div class="search-container logged-in-only">
+          <input
+            type="text"
+            placeholder="Buscar Barbearias"
+            class="search-input"
+          />
+          <button class="search-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+        </div>
+
+        <nav class="header-nav">
+          <div class="user-actions logged-in-only">
+            <a href="#" class="nav-link">
+              <span class="icon">📅</span> Agendamentos
+            </a>
+            <button class="profile-btn">
+              <span class="icon-user">👤</span> Perfil
+            </button>
+          </div>
+
+          <div class="guest-actions logged-out-only">
+            <button class="btn-login-main">Fazer Login</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="dashboard-container">
+      <section class="welcome-area">
+        <div class="welcome-text">
+          <h1>Olá, <span class="user-name">Faça seu login!</span></h1>
+          <p id="current-date">Sexta, 2 de Fevereiro</p>
+
+          <div class="hero-search-bar">
+            <input type="text" placeholder="Buscar Barbearias" />
+            <button class="purple-search-btn">🔍</button>
+          </div>
+        </div>
+
+        <div class="recommendations">
+          <h3 class="section-label">RECOMENDADOS</h3>
+          <div class="horizontal-scroll">
+            <div class="mini-card">
+              <img src="img/01.png" alt="Barbearia 01" />
+              <div class="mini-card-content">
+                <span class="mini-rating">⭐ 5,0</span>
+                <h4>Vintage Barber</h4>
+                <p>Av. São Sebastião, 357</p>
+                <button class="btn-reserve-small">Reservar</button>
+              </div>
+            </div>
+            <div class="mini-card">
+              <img src="img/02.png" alt="Barbearia 02" />
+              <div class="mini-card-content">
+                <span class="mini-rating">⭐ 5,0</span>
+                <h4>Homem Elegante</h4>
+                <p>Av. São Sebastião, 357</p>
+                <button class="btn-reserve-small">Reservar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-grid-section">
+        <h3 class="section-label">Populares</h3>
+        <div class="grid-layout">
+          <div class="barber-card">
+            <div class="card-thumb">
+              <span class="rating-tag">⭐ 5,0</span>
+              <img src="img/03.png" alt="Barbearia 03" />
+            </div>
+            <div class="card-info">
+              <h4>Vintage Barber</h4>
+              <p>Avenida São Sebastião, 357</p>
+              <button class="btn-action-full">Reservar</button>
+            </div>
+          </div>
+          <div class="barber-card">
+            <div class="card-thumb">
+              <span class="rating-tag">⭐ 5,0</span><img src="img/04.png" />
+            </div>
+            <div class="card-info">
+              <h4>Barber Style</h4>
+              <p>Rua das Flores, 123</p>
+              <button class="btn-action-full">Reservar</button>
+            </div>
+          </div>
+          <div class="barber-card">
+            <div class="card-thumb">
+              <span class="rating-tag">⭐ 5,0</span><img src="img/05.png" />
+            </div>
+            <div class="card-info">
+              <h4>Corte Real</h4>
+              <p>Centro Histórico</p>
+              <button class="btn-action-full">Reservar</button>
+            </div>
+          </div>
+          <div class="barber-card">
+            <div class="card-thumb">
+              <span class="rating-tag">⭐ 5,0</span><img src="img/06.png" />
+            </div>
+            <div class="card-info">
+              <h4>Classic Men</h4>
+              <p>Av. Brasil, 900</p>
+              <button class="btn-action-full">Reservar</button>
+            </div>
+          </div>
+          <div class="barber-card">
+            <div class="card-thumb">
+              <span class="rating-tag">⭐ 5,0</span><img src="img/07.png" />
+            </div>
+            <div class="card-info">
+              <h4>Navalha Afiada</h4>
+              <p>Rua 10, nº 50</p>
+              <button class="btn-action-full">Reservar</button>
+            </div>
+          </div>
+          <div class="barber-card">
+            <div class="card-thumb">
+              <span class="rating-tag">⭐ 5,0</span><img src="img/08.png" />
+            </div>
+            <div class="card-info">
+              <h4>Barber Shop</h4>
+              <p>Rua Direita, 200</p>
+              <button class="btn-action-full">Reservar</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="main-grid-section">
+        <h3 class="section-label">Mais Visitados</h3>
+        <div class="grid-layout">
+          <div class="barber-card">
+            <div class="card-thumb">
+              <span class="rating-tag">⭐ 5,0</span>
+              <img src="img/12.png" alt="Barbearia 12" />
+            </div>
+            <div class="card-info">
+              <h4>The Gent</h4>
+              <p>Shopping Center, Lj 4</p>
+              <button class="btn-action-full">Reservar</button>
+            </div>
+          </div>
+          <div class="barber-card">
+            <div class="card-thumb">
+              <span class="rating-tag">⭐ 5,0</span><img src="img/13.png" />
+            </div>
+            <div class="card-info">
+              <h4>Barba & Cia</h4>
+              <p>Av. Paulista, 1000</p>
+              <button class="btn-action-full">Reservar</button>
+            </div>
+          </div>
+          <div class="barber-card">
+            <div class="card-thumb">
+              <span class="rating-tag">⭐ 5,0</span><img src="img/14.png" />
+            </div>
+            <div class="card-info">
+              <h4>Mestre do Corte</h4>
+              <p>Rua Augusta, 500</p>
+              <button class="btn-action-full">Reservar</button>
+            </div>
+          </div>
+          <div class="barber-card">
+            <div class="card-thumb">
+              <span class="rating-tag">⭐ 5,0</span><img src="img/15.png" />
+            </div>
+            <div class="card-info">
+              <h4>Urban Barber</h4>
+              <p>Vila Madalena, 22</p>
+              <button class="btn-action-full">Reservar</button>
+            </div>
+          </div>
+          <div class="barber-card">
+            <div class="card-thumb">
+              <span class="rating-tag">⭐ 5,0</span><img src="img/16.png" />
+            </div>
+            <div class="card-info">
+              <h4>Vip Barber</h4>
+              <p>Jardins, 88</p>
+              <button class="btn-action-full">Reservar</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <p>© 2026 FSW Barber</p>
+    </footer>
+
+    <script>
+      // Script simples para manter a data atualizada
+      const dateElement = document.getElementById("current-date");
+      const options = { weekday: "long", day: "numeric", month: "long" };
+      dateElement.innerText = new Date().toLocaleDateString("pt-BR", options);
+    </script>
+  </body>
+</html>
