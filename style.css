@@ -246,6 +246,22 @@ body {
   width: 100%;
 }
 
+/*BOTÃO VOLTAR*/
+.link-voltar {
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+  color: #b76e79;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.link-voltar:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
 /* CONTATO */
 .contact-section {
   padding: 30px 20px;
