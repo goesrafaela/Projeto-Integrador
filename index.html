@@ -3,20 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FSW Barber - Dashboard</title>
+    <title>Studio Andressa Mariano Hair</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="user-logged">
     <header class="main-header">
       <div class="header-content">
         <div class="logo-container">
-          <img src="img/Logo.png" alt="FSW Barber" class="logo-img" />
+          <img src="img/logo.png" alt="Andressa Mariano" class="logo-img" />
         </div>
 
         <div class="search-container logged-in-only">
           <input
             type="text"
-            placeholder="Buscar Barbearias"
+            placeholder="Buscar"
             class="search-input"
           />
           <button class="search-btn">
@@ -40,15 +40,11 @@
         <nav class="header-nav">
           <div class="user-actions logged-in-only">
             <a href="#" class="nav-link">
-              <span class="icon">📅</span> Agendamentos
+              <img src="img/icone-agendamentos.png" class="nav-icon"> Agendamentos
             </a>
             <button class="profile-btn">
-              <span class="icon-user">👤</span> Perfil
+              <img src="img/icone-perfil.png" class="profile-img"> Perfil
             </button>
-          </div>
-
-          <div class="guest-actions logged-out-only">
-            <button class="btn-login-main">Fazer Login</button>
           </div>
         </nav>
       </div>
@@ -57,171 +53,155 @@
     <main class="dashboard-container">
       <section class="welcome-area">
         <div class="welcome-text">
-          <h1>Olá, <span class="user-name">Faça seu login!</span></h1>
-          <p id="current-date">Sexta, 2 de Fevereiro</p>
-
-          <div class="hero-search-bar">
-            <input type="text" placeholder="Buscar Barbearias" />
-            <button class="purple-search-btn">🔍</button>
+          <h1>Olá, <span class="user-name">Seja Bem-Vinda!</span></h1>
+          <div class="guest-actions logged-out-only"></div>
+           <button class="btn-login-main">Login</button>
           </div>
-        </div>
 
-        <div class="recommendations">
-          <h3 class="section-label">RECOMENDADOS</h3>
-          <div class="horizontal-scroll">
-            <div class="mini-card">
-              <img src="img/01.png" alt="Barbearia 01" />
-              <div class="mini-card-content">
-                <span class="mini-rating">⭐ 5,0</span>
-                <h4>Vintage Barber</h4>
-                <p>Av. São Sebastião, 357</p>
-                <button class="btn-reserve-small">Reservar</button>
-              </div>
-            </div>
-            <div class="mini-card">
-              <img src="img/02.png" alt="Barbearia 02" />
-              <div class="mini-card-content">
-                <span class="mini-rating">⭐ 5,0</span>
-                <h4>Homem Elegante</h4>
-                <p>Av. São Sebastião, 357</p>
-                <button class="btn-reserve-small">Reservar</button>
-              </div>
-            </div>
-          </div>
-        </div>
+ 
       </section>
+
+ <div class="divider"></div>
+
+ <section class="main-grid-section">
 
       <section class="main-grid-section">
-        <h3 class="section-label">Populares</h3>
+        <h3 class="section-label">Conheça nossos serviços</h3>
         <div class="grid-layout">
-          <div class="barber-card">
+          <div class="servico-card">
             <div class="card-thumb">
-              <span class="rating-tag">⭐ 5,0</span>
-              <img src="img/03.png" alt="Barbearia 03" />
+              <img src="img/01.jpg"Corte" />
             </div>
             <div class="card-info">
-              <h4>Vintage Barber</h4>
-              <p>Avenida São Sebastião, 357</p>
+              <h4>Corte</h4>
+              <p>R$65,00</p>
               <button class="btn-action-full">Reservar</button>
             </div>
           </div>
-          <div class="barber-card">
+          <div class="servico-card">
             <div class="card-thumb">
-              <span class="rating-tag">⭐ 5,0</span><img src="img/04.png" />
+             <img src="img/02.jpg" />
             </div>
             <div class="card-info">
-              <h4>Barber Style</h4>
-              <p>Rua das Flores, 123</p>
+              <h4>Hidratação</h4>
+              <p>R$100,00</p>
               <button class="btn-action-full">Reservar</button>
             </div>
           </div>
-          <div class="barber-card">
+          <div class="servico-card">
             <div class="card-thumb">
-              <span class="rating-tag">⭐ 5,0</span><img src="img/05.png" />
+              <img src="img/03.jpg" />
             </div>
             <div class="card-info">
-              <h4>Corte Real</h4>
-              <p>Centro Histórico</p>
+              <h4>Reconstrução</h4>
+              <p>R$100,00</p>
               <button class="btn-action-full">Reservar</button>
             </div>
           </div>
-          <div class="barber-card">
+          <div class="servico-card">
             <div class="card-thumb">
-              <span class="rating-tag">⭐ 5,0</span><img src="img/06.png" />
+              <img src="img/04.jpg" />
             </div>
             <div class="card-info">
-              <h4>Classic Men</h4>
-              <p>Av. Brasil, 900</p>
+              <h4>Nutrição</h4>
+              <p>R$100,00</p>
               <button class="btn-action-full">Reservar</button>
             </div>
           </div>
-          <div class="barber-card">
+          <div class="servico-card">
             <div class="card-thumb">
-              <span class="rating-tag">⭐ 5,0</span><img src="img/07.png" />
+             <img src="img/05.jpg" />
             </div>
             <div class="card-info">
-              <h4>Navalha Afiada</h4>
-              <p>Rua 10, nº 50</p>
+              <h4>Progressiva</h4>
+              <p>R$220,00</p>
               <button class="btn-action-full">Reservar</button>
             </div>
           </div>
-          <div class="barber-card">
+          <div class="servico-card">
             <div class="card-thumb">
-              <span class="rating-tag">⭐ 5,0</span><img src="img/08.png" />
+             <img src="img/06.jpg" />
             </div>
             <div class="card-info">
-              <h4>Barber Shop</h4>
-              <p>Rua Direita, 200</p>
+              <h4>Botox</h4>
+              <p>R$180,00</p>
+              <button class="btn-action-full">Reservar</button>
+            </div>
+          </div>
+          <div class="servico-card">
+            <div class="card-thumb">
+             <img src="img/07.jpg" />
+            </div>
+            <div class="card-info">
+              <h4>Coloração completa</h4>
+              <p>R$150,00</p>
+              <button class="btn-action-full">Reservar</button>
+            </div>
+          </div>
+          <div class="servico-card">
+            <div class="card-thumb">
+             <img src="img/08.jpg" />
+            </div>
+            <div class="card-info">
+              <h4>Mechas ou Luzes</h4>
+              <p>R$250,00</p>
+              <button class="btn-action-full">Reservar</button>
+            </div>
+          </div>
+          <div class="servico-card">
+            <div class="card-thumb">
+             <img src="img/09.jpg" />
+            </div>
+            <div class="card-info">
+              <h4>Escova</h4>
+              <p>R$50,00</p>
+              <button class="btn-action-full">Reservar</button>
+            </div>
+          </div>
+          <div class="servico-card">
+            <div class="card-thumb">
+             <img src="img/10.jpg" />
+            </div>
+            <div class="card-info">
+              <h4>Penteado</h4>
+              <p>R$150,00</p>
               <button class="btn-action-full">Reservar</button>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="main-grid-section">
-        <h3 class="section-label">Mais Visitados</h3>
-        <div class="grid-layout">
-          <div class="barber-card">
-            <div class="card-thumb">
-              <span class="rating-tag">⭐ 5,0</span>
-              <img src="img/12.png" alt="Barbearia 12" />
-            </div>
-            <div class="card-info">
-              <h4>The Gent</h4>
-              <p>Shopping Center, Lj 4</p>
-              <button class="btn-action-full">Reservar</button>
-            </div>
-          </div>
-          <div class="barber-card">
-            <div class="card-thumb">
-              <span class="rating-tag">⭐ 5,0</span><img src="img/13.png" />
-            </div>
-            <div class="card-info">
-              <h4>Barba & Cia</h4>
-              <p>Av. Paulista, 1000</p>
-              <button class="btn-action-full">Reservar</button>
-            </div>
-          </div>
-          <div class="barber-card">
-            <div class="card-thumb">
-              <span class="rating-tag">⭐ 5,0</span><img src="img/14.png" />
-            </div>
-            <div class="card-info">
-              <h4>Mestre do Corte</h4>
-              <p>Rua Augusta, 500</p>
-              <button class="btn-action-full">Reservar</button>
-            </div>
-          </div>
-          <div class="barber-card">
-            <div class="card-thumb">
-              <span class="rating-tag">⭐ 5,0</span><img src="img/15.png" />
-            </div>
-            <div class="card-info">
-              <h4>Urban Barber</h4>
-              <p>Vila Madalena, 22</p>
-              <button class="btn-action-full">Reservar</button>
-            </div>
-          </div>
-          <div class="barber-card">
-            <div class="card-thumb">
-              <span class="rating-tag">⭐ 5,0</span><img src="img/16.png" />
-            </div>
-            <div class="card-info">
-              <h4>Vip Barber</h4>
-              <p>Jardins, 88</p>
-              <button class="btn-action-full">Reservar</button>
-            </div>
-          </div>
+      <div class="divider"></div>
+     
+  <section class="contact-section">
+     <h3 class="section-label">Onde nos encontrar</h3>
+
+     <div class="contact-container">
+
+      <div class="contact-item">
+         <h4>📍 Endereço</h4>
+         <p>Rua Indonésia, 89 - Vilarejo</p>
+       </div>
+
+       <div class="contact-item">
+         <h4>📞 Telefone</h4>
+         <p>(11) 95638-2834</p>
+       </div>
+
+       <div class="contact-item">
+         <h4>📷 Instagram</h4>
+         <p>@studioandressamariano</p>
         </div>
-      </section>
+
+      </div>
+     </section>
     </main>
 
     <footer class="main-footer">
-      <p>© 2026 FSW Barber</p>
+      <p>© 2026 Studio Andressa Mariano Hair</p>
     </footer>
 
     <script>
-      // Script simples para manter a data atualizada
       const dateElement = document.getElementById("current-date");
       const options = { weekday: "long", day: "numeric", month: "long" };
       dateElement.innerText = new Date().toLocaleDateString("pt-BR", options);
