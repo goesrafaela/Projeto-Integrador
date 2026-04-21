@@ -59,6 +59,7 @@ class ServicoResponse(BaseModel):
     nome: str
     preco: float
     descricao: str = None
+    imagem: str
 
 
 app = FastAPI(
@@ -223,7 +224,7 @@ def listar_servicos() -> List[Dict[str, Any]]:
     """Lista todos os serviços disponíveis"""
     try:
         with get_db_cursor(dictionary=True) as cursor:
-            cursor.execute("SELECT id, nome, preco, descricao FROM servicos")
+            cursor.execute("SELECT id, nome, preco, descricao, imagem FROM servicos")
             servicos = cursor.fetchall()
             logger.info(f"{len(servicos)} serviços listados")
             return servicos
