@@ -1,49 +1,47 @@
-function fazerLogin(event) {
+
+function salvarSessaoUsuario(dados) {
+    localStorage.setItem("logado", "true");
+    if (dados.usuario) {
+        localStorage.setItem("usuario", JSON.stringify(dados.usuario));
+        localStorage.setItem("nome_usuario", dados.usuario.nome);
+    }
+}
+
+async function autenticarUsuario(dadosLogin) {
+    const response = await fetch('http://localhost:8000/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(dadosLogin)
+    });
+
+    if (!response.ok) {
+        throw new Error('Usuário ou senha inválidos');
+    }
+
+    return await response.json();
+}
+
+
+async function fazerLogin(event) {
     event.preventDefault();
 
-    const campoEmail = document.getElementById('email');
-    const campoSenha = document.getElementById('password');
-
     const dadosLogin = {
-        email: campoEmail.value,
-        senha: campoSenha.value
+        email: document.getElementById('email').value,
+        senha: document.getElementById('password').value
     };
 
-    console.log("Tentando login com:", dadosLogin);
-
-    fetch('http://localhost:8000/login', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(dadosLogin)
-    })
-    
-// Dentro do seu fetch de login
-    .then(response => {
-        if (response.ok) {
-            return response.json();
-        }
-        throw new Error('Usuário ou senha inválidos');
-    })
-    .then(data => {
-    console.log("Dados recebidos do servidor:", data); // Isso aqui vai te mostrar o que o Python enviou
-
-    // SALVANDO NO LOCAL STORAGE
-    localStorage.setItem("logado", "true");
-    
-    // Se o seu Python retorna o usuário, salve assim:
-    if (data.usuario) {
-    localStorage.setItem("usuario", JSON.stringify(data.usuario));
-    localStorage.setItem("nome_usuario", data.usuario.nome);
-    }
-    
-    console.log("LocalStorage após gravar:", localStorage.getItem("logado"));
-
-    alert("Login realizado com sucesso!");
-    window.location.href = "index.html"; 
-    })
-    .catch(error => {
+    try {
+        const data = await autenticarUsuario(dadosLogin);
+        
+        salvarSessaoUsuario(data);
+        // ASSIM QUE FICAR PRONTA A TELA DE DEPOIS Q A PESSOA FAZ LOGIN 
+        // REDIRECIONAR PARA ELA
+        // NO MOMENTO ESTÁ VOLTANDO PRA PÁGINA INICIAL
+        alert("Bem-vinda de volta! ^^");
+        window.location.href = "index.html";
+        
+    } catch (error) {
         console.error("Erro no login:", error);
-    });
+        alert(error.message);
+    }
 }
