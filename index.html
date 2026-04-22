@@ -56,9 +56,9 @@
         <section class="main-grid-section">
           <h3 class="section-label">Conheça nossos serviços</h3>
 
-          <div class="grid-layout">
+          <div id="container-servicos" class="grid-layout">
             <!-- CORRIGIDO -->
-            <div class="servico-card">
+            <!--<div class="servico-card">
               <div class="card-thumb">
                 <img src="img/01.jpg" alt="Corte" />
               </div>
@@ -152,7 +152,7 @@
                   Reservar
                 </button>
               </div>
-            </div>
+            </div> 
 
             <div class="servico-card">
               <div class="card-thumb">
@@ -216,7 +216,7 @@
                   Reservar
                 </button>
               </div>
-            </div>
+            </div> -->
           </div>
         </section>
 
@@ -248,40 +248,7 @@
     <footer class="main-footer">
       <p>© 2026 Studio Andressa Mariano Hair</p>
     </footer>
-
-    <script>
-      const dateElement = document.getElementById("current-date");
-
-      if (dateElement) {
-        const options = { weekday: "long", day: "numeric", month: "long" };
-        dateElement.innerText = new Date().toLocaleDateString("pt-BR", options);
-      }
-    </script>
-
-    <script>
-      let servicoSelecionado = "";
-      let precoSelecionado = "";
-
-      function abrirModal(servico, preco) {
-        servicoSelecionado = servico;
-        precoSelecionado = preco;
-
-        document.getElementById("servico-nome").innerText = servico;
-        document.getElementById("servico-preco").innerText = preco;
-
-        document.getElementById("modal-agendamento").style.display = "flex";
-      }
-
-      function fecharModal() {
-        document.getElementById("modal-agendamento").style.display = "none";
-      }
-
-      function confirmarAgendamento() {
-        alert("Agendamento confirmado: " + servicoSelecionado);
-        fecharModal();
-      }
-    </script>
-
+  
     <!-- MODAL -->
     <div id="modal-agendamento" class="login-container" style="display: none">
       <div class="login-box">
@@ -300,5 +267,7 @@
         >
       </div>
     </div>
+    <script src="js/servicos.js"></script>
+
   </body>
 </html>
